@@ -69,4 +69,4 @@ for epoch in range(200):
         loss.backward()
         optimizer.step()
     if epoch % 10 == 0:
-        torch.save(model, CHECKPOINTS_PATH + 'model' + str(epoch))
+        torch.save(model.state_dict(), CHECKPOINTS_PATH + 'model' + str(epoch))
